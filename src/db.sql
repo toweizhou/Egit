@@ -30,3 +30,5 @@ INSERT INTO goods values(
 	"矿泉水",
 	1
 );
+
+select * from goods limit 0,2
