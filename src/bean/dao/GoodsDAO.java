@@ -11,7 +11,7 @@ public class GoodsDAO {
 	DBBean db = new DBBean();
 	int recordsPerPage = 2;
 	
-	ArrayList getGoodsByPage(int pageNo){
+	public ArrayList getGoodsByPage(int pageNo){
 		ArrayList goodsList = new ArrayList();
 		
 		Connection con = db.getConnection();
