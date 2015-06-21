@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	<table>
+	<table border="1">
 		<thead>
 			<tr>
 				<td>产品编号</td>
