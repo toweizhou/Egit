@@ -37,4 +37,29 @@ public class GoodsDAO {
 		return goodsList;
 		
 	}
+	
+	
+	public GoodsVo getGoodsById(String goodsId){
+		GoodsVo g = null;
+		
+		Connection con = db.getConnection();
+		try {
+			ResultSet rs = db.executeQuery("select * from goods where goodsid='"+goodsId+"'", null);
+			if(rs != null){
+				while(rs.next()){
+					g.setGoodsId(rs.getString("goodsid"));
+					g.setGoodsName(rs.getString("goodsname"));
+					g.setPrice(rs.getFloat("price"));
+					
+					
+				}
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return g;
+		
+	}
 }
