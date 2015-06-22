@@ -47,11 +47,10 @@ public class GoodsDAO {
 			ResultSet rs = db.executeQuery("select * from goods where goodsid='"+goodsId+"'", null);
 			if(rs != null){
 				while(rs.next()){
+					g = new GoodsVo();
 					g.setGoodsId(rs.getString("goodsid"));
 					g.setGoodsName(rs.getString("goodsname"));
 					g.setPrice(rs.getFloat("price"));
-					
-					
 				}
 			}
 		} catch (Exception e) {
