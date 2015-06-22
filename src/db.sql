@@ -1,3 +1,4 @@
+CREATE DATABASE shopping;
 USE shopping;
 
 CREATE TABLE goods (
