@@ -26,8 +26,9 @@ public class CartManager {
 			Item oneItem = it.next();
 			if(goodsId.equals(oneItem.getGoods().getGoodsId())){
 				existFlag = true;
+				oneItem.setCount(oneItem.getCount()+count);
 			}
-			oneItem.setCount(oneItem.getCount()+count);
+			
 		}
 		
 		if(existFlag == false){
