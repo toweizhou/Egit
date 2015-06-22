@@ -8,6 +8,14 @@ import bean.vo.Item;
 
 public class CartManager {
 	ArrayList<Item> cart = new ArrayList<Item>();
+	public ArrayList<Item> getCart() {
+		return cart;
+	}
+
+	public void setCart(ArrayList<Item> cart) {
+		this.cart = cart;
+	}
+
 	GoodsDAO goodsDAO = new GoodsDAO();
 	
 	public void addToCart(String goodsId,int count){
