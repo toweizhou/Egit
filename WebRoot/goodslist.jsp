@@ -41,7 +41,7 @@
 				<td>${goods.goodsId}</td>
 				<td>${goods.goodsName}</td>
 				<td>${goods.price }</td>
-				<td><a href="addToCartServlet?goodsId=${goods.goodsId}">将产品添加到购物车里</a></td>
+				<td><a href="addToCartServlet?goodsId=${goods.goodsId}">将产品添加到购物车</a></td>
 
 			</tr>
 			</c:forEach>
