@@ -42,4 +42,15 @@ public class CartManager {
 		
 	}
 	
+	public void deleteGoods(String goodsId){
+		Iterator<Item> it = cart.iterator();
+		while(it.hasNext()){
+			Item oneItem = it.next();
+			if(oneItem.getGoods().getGoodsId().equals(goodsId)){
+				it.remove();
+			}
+			
+		}
+	}
+	
 }

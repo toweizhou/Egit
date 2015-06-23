@@ -24,6 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  <a href="getAllGoods">继续购物</a>
     <table border="1">
     	<thead>
     		<tr>
@@ -36,10 +37,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</thead>
      	<c:forEach items="${sessionScope.cart}" var="items">
      		<tr>
+     		<form action="processCart" method="post">
+     		<input type="hidden" name="goodsId" value="${items.goods.goodsId}"/>
      			<td>${items.goods.goodsId}</td>
      			<td>${items.goods.goodsName}</td>
      			<td>${items.goods.price}</td>
      			<td>${items.count}</td>
+     			<td><input type="submit" name="action" value="修改"/>
+     				<input type="submit" name="action" value="删除"/>
+     			</td>
+     		</form>
      		</tr>
      	</c:forEach>
     </table>
